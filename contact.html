@@ -2,105 +2,165 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Contact - MonSite</title>
+    <title>Contact - Mon Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<header>
+    <!-- MENU -->
 
-    <nav>
+    <header>
 
-        <div class="logo">
-            MonSite
-        </div>
+        <nav>
 
-        <button id="menuBouton" class="menu-bouton">
-            ☰
-        </button>
+            <div class="logo">
+                MonSite
+            </div>
 
-        <ul id="menu" class="menu">
-
-            <li>
-                <a href="index.html">Accueil</a>
-            </li>
-
-            <li>
-                <a href="apropos.html">À propos</a>
-            </li>
-
-            <li>
-                <a href="projets.html">Projets</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-</header>
-
-
-<main>
-
-    <section>
-
-        <h1>Contactez-moi</h1>
-
-        <form id="contactForm">
-
-            <input
-                type="text"
-                id="nom"
-                placeholder="Votre nom"
-            >
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Votre email"
-            >
-
-            <textarea
-                id="messageContact"
-                placeholder="Votre message"
-            ></textarea>
-
-            <button type="submit">
-                Envoyer
+            <button id="menuBouton" class="menu-bouton">
+                ☰
             </button>
 
-        </form>
+            <ul id="menu" class="menu">
 
-        <p id="resultat"></p>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
 
-    </section>
+                <li>
+                    <a href="apropos.html">À propos</a>
+                </li>
 
-</main>
+                <li>
+                    <a href="projets.html">Projets</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
 
 
-<footer>
+    <!-- CONTACT -->
 
-    <p>
-        © 2026 MonSite
-    </p>
+    <main>
 
-</footer>
+        <section class="contact-section">
+
+            <h1>Contactez-moi</h1>
+
+            <p class="description">
+                Vous avez une question ou un projet ?
+                Envoyez-moi un message.
+            </p>
 
 
-<script src="script.js"></script>
+            <form id="contactForm" class="contact-form">
+
+                <div class="form-group">
+
+                    <label for="nom">
+                        Nom
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nom"
+                        name="nom"
+                        placeholder="Votre nom"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="votre@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="sujet">
+                        Sujet
+                    </label>
+
+                    <input
+                        type="text"
+                        id="sujet"
+                        name="sujet"
+                        placeholder="Sujet du message"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Écrivez votre message..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn">
+                    Envoyer le message
+                </button>
+
+                <p id="messageForm"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Mon Portfolio - Tous droits réservés
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 

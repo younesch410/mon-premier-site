@@ -35,3 +35,20 @@ if (menuBouton && menu) {
     });
 
 }
+const contactForm = document.getElementById("contactForm");
+const messageForm = document.getElementById("messageForm");
+
+if (contactForm && messageForm) {
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        messageForm.textContent =
+            "Votre message a bien été pris en compte.";
+
+        contactForm.reset();
+
+    });
+
+}

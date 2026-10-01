@@ -24,11 +24,14 @@ bouton.addEventListener("click", function() {
 
 });}
 const menuBouton = document.getElementById("menuBouton");
-
 const menu = document.getElementById("menu");
+
 if (menuBouton && menu) {
-menuBouton.addEventListener("click", function() {
 
-    menu.classList.toggle("actif");
+    menuBouton.addEventListener("click", function() {
 
-});}
+        menu.classList.toggle("actif");
+
+    });
+
+}

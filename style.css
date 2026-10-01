@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* NAVIGATION */
+
+header {
+    background-color: #222;
+    padding: 20px 40px;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #60a5fa;
+}
+
+
+/* CONTENU */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* SECTIONS */
+
+section {
+    background-color: white;
+    margin: 30px 0;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    color: #16a34a;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* BOUTON */
+
+button {
+    background-color: #16a34a;
+    color: white;
+
+    border: none;
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* CARTES */
+
+.competences {
+    display: flex;
+    gap: 20px;
+}
+
+.carte {
+    flex: 1;
+
+    padding: 25px;
+
+    background-color: #f4f4f4;
+
+    border-radius: 10px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+@media (max-width: 700px) {
+
+    nav {
+        position: relative;
+    }
+
+    .menu-bouton {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        text-align: center;
+
+        padding-top: 20px;
+    }
+
+    .menu.actif {
+        display: flex;
+    }
+
+    .competences {
+        flex-direction: column;
+    }
+
+    section {
+        margin: 15px;
+        padding: 25px;
+    }
+
+
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+input,
+textarea {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    width: 150px;
+}
+.menu-bouton {
+    display: none;
+
+    background: none;
+    color: white;
+
+    border: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}

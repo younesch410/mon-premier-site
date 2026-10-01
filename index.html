@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mon premier site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+    <nav>
+
+        <div class="logo">
+            MonSite
+        </div>
+
+        <button id="menuBouton" class="menu-bouton">
+            ☰
+        </button>
+
+        <ul id="menu" class="menu">
+
+            <li>
+                <a href="#accueil">Accueil</a>
+            </li>
+
+            <li>
+                <a href="#apropos">À propos</a>
+            </li>
+
+            <li>
+                <a href="#competences">Compétences</a>
+            </li>
+
+            <li>
+                <a href="#projets">Projets</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+    <main>
+
+    <section id="accueil">
+
+        <h1>Bienvenue sur mon site</h1>
+
+        <p>
+            Bonjour et bienvenue sur mon premier site web.
+        </p>
+
+        <button id="monBouton">Découvrez-moi</button>
+
+        <p id="message"></p>
+    </section>
+
+
+    <section id="apropos">
+
+        <h2>À propos de moi</h2>
+
+        <p>
+            Bonjour, je m'appelle Younes.
+            Je suis étudiant en informatique
+            et j'apprends le développement web.
+        </p>
+
+    </section>
+
+
+    <section id="competences">
+
+        <h2>Mes compétences</h2>
+
+        <div class="competences">
+
+            <div class="carte">
+                <h3>HTML</h3>
+                <p>Je crée la structure des pages web.</p>
+            </div>
+
+            <div class="carte">
+                <h3>CSS</h3>
+                <p>Je crée le design des pages web.</p>
+            </div>
+
+            <div class="carte">
+                <h3>JavaScript</h3>
+                <p>Je rends les pages interactives.</p>
+            </div>
+            <div class="carte">
+               <h3>Python</h3>
+               <p>Je développe des programmes avec Python.</p>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="competences">
+
+    <h2>Mes compétences</h2>
+
+    <button id="afficherCompetences">
+        Afficher mes compétences
+    </button>
+
+    <div id="listeCompetences"></div>
+
+</section>
+
+
+    <section id="contact">
+
+    <h2>Contact</h2>
+
+    <form id="contactForm">
+
+        <label for="nom">
+            Nom :
+        </label>
+
+        <input
+            type="text"
+            id="nom"
+            placeholder="Votre nom"
+        >
+
+        <br><br>
+
+
+        <label for="email">
+            Email :
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Votre email"
+        >
+
+        <br><br>
+
+
+        <label for="messageContact">
+            Message :
+        </label>
+
+        <br>
+
+        <textarea
+            id="messageContact"
+            placeholder="Votre message"
+        ></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Envoyer
+        </button>
+
+    </form>
+
+    <p id="resultat"></p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 MonSite
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>

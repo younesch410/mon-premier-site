@@ -1,77 +1,359 @@
+/* ========================================
+   RESET
+======================================== */
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #222;
 }
 
 
-/* NAVIGATION */
+/* ========================================
+   NAVIGATION
+======================================== */
 
 header {
-    background-color: #222;
-    padding: 20px 40px;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding: 15px 25px;
 }
-
-
-/* LOGO */
 
 .logo {
     color: white;
     font-size: 25px;
     font-weight: bold;
 }
+
+.menu {
+    display: flex;
+
+    list-style: none;
+
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   BOUTON MENU MOBILE
+======================================== */
+
+.menu-bouton {
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   HERO / ACCUEIL
+======================================== */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background-color: white;
+}
+
+.hero-text {
+    max-width: 800px;
+}
+
+.petit-titre {
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    font-weight: bold;
+}
+
+.hero h2 {
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* ========================================
+   BOUTONS
+======================================== */
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background-color: #111;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    border: 2px solid #111;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.8;
+}
+
+.btn.secondaire {
+    background-color: transparent;
+
+    color: #111;
+}
+
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+section {
+    padding: 80px 20px;
+}
+
+.description {
+    max-width: 650px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   COMPETENCES
+======================================== */
+
+.competences-section {
+    text-align: center;
+
+    background-color: #f5f5f5;
+}
+
+.competences-section h2 {
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.competences {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.competence {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.competence:hover {
+    transform: translateY(-8px);
+}
+
+.competence h3 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.competence p {
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   PAGE PROJETS
+======================================== */
+
 .projets-section {
     max-width: 1100px;
+
     margin: auto;
+
     padding: 80px 20px;
+
     text-align: center;
 }
 
 .projets-section > h1 {
     font-size: 40px;
+
     margin-bottom: 15px;
 }
 
 .projets-container {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 30px;
+
     margin-top: 50px;
 }
 
 .projet {
+    background-color: white;
+
     overflow: hidden;
+
     border-radius: 12px;
+
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
     text-align: left;
+
+    transition: 0.3s;
 }
+
+.projet:hover {
+    transform: translateY(-8px);
+}
+
+
+/* ========================================
+   IMAGES DES PROJETS
+======================================== */
 
 .projet-image {
-    height: 200px;
+    height: 220px;
+
+    overflow: hidden;
+
+    background-color: #ddd;
 }
 
-.image-placeholder {
+.projet-image img {
+    width: 100%;
+
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    font-weight: bold;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s;
 }
+
+.projet:hover .projet-image img {
+    transform: scale(1.08);
+}
+
+
+/* ========================================
+   CONTENU PROJET
+======================================== */
 
 .projet-contenu {
     padding: 25px;
@@ -83,350 +365,206 @@ nav {
 
 .projet-contenu p {
     line-height: 1.6;
+
+    margin-bottom: 10px;
 }
+
+
+/* ========================================
+   TECHNOLOGIES
+======================================== */
 
 .technologies {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 8px;
+
     margin: 20px 0;
 }
 
 .technologies span {
     padding: 6px 10px;
+
+    background-color: #eee;
+
     border-radius: 5px;
+
     font-size: 13px;
+
     font-weight: bold;
 }
 
-.projet .btn {
-    display: inline-block;
-}
 
-/* MENU */
+/* ========================================
+   PAGE CONTACT
+======================================== */
 
-.menu {
-    display: flex;
-    gap: 25px;
+.contact-section {
+    max-width: 800px;
 
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.menu a:hover {
-    color: #60a5fa;
-}
-
-
-/* CONTENU */
-
-main {
-    max-width: 1000px;
     margin: auto;
+
+    padding: 80px 20px;
 }
 
-
-/* SECTIONS */
-
-section {
-    background-color: white;
-    margin: 30px 0;
-    padding: 40px;
-    border-radius: 10px;
-}
-
-h1 {
-    font-size: 40px;
-}
-
-h2 {
-    color: #16a34a;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-
-/* BOUTON */
-
-button {
-    background-color: #16a34a;
-    color: white;
-
-    border: none;
-    padding: 12px 25px;
-
-    border-radius: 8px;
-
-    font-size: 16px;
-
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #1d4ed8;
-}
-
-
-/* CARTES */
-
-.competences {
-    display: flex;
-    gap: 20px;
-}
-
-.carte {
-    flex: 1;
-
-    padding: 25px;
-
-    background-color: #f4f4f4;
-
-    border-radius: 10px;
-}
-
-
-/* FOOTER */
-
-footer {
-    background-color: #222;
-    color: white;
-
+.contact-section h1 {
     text-align: center;
 
-    padding: 20px;
-}
-@media (max-width: 700px) {
-.projets-container {
-    grid-template-columns: 1fr;
+    font-size: 40px;
+
+    margin-bottom: 15px;
 }
 
-.projets-section {
-    padding: 50px 20px;
+.contact-form {
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    margin-top: 40px;
 }
 
-.projets-section > h1 {
-    font-size: 32px;
-}
-    nav {
-        position: relative;
-    }
-
-    .menu-bouton {
-        display: block;
-    }
-
-    .menu {
-        display: none;
-
-        flex-direction: column;
-
-        width: 100%;
-
-        text-align: center;
-
-        padding-top: 20px;
-    }
-
-    .menu.actif {
-        display: flex;
-    }
-
-    .competences {
-        flex-direction: column;
-    }
-
-    section {
-        margin: 15px;
-        padding: 25px;
-    }
-
-
-
-}
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
+.form-group {
+    margin-bottom: 20px;
 }
 
-input,
-textarea {
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
     padding: 12px;
 
     border: 1px solid #ccc;
 
     border-radius: 6px;
 
+    font-family: Arial, sans-serif;
+
     font-size: 16px;
+
+    outline: none;
 }
 
-textarea {
-    min-height: 120px;
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #111;
+}
+
+.form-group textarea {
+    min-height: 150px;
+
     resize: vertical;
 }
 
-form button {
-    width: 150px;
-}
-.menu-bouton {
-    display: none;
-
-    background: none;
-    color: white;
-
-    border: none;
-
-    font-size: 30px;
-
+.contact-form button {
     cursor: pointer;
 }
-.hero {
-    min-height: 80vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* ========================================
+   A PROPOS
+======================================== */
+
+.apropos-section {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 80px 20px;
+}
+
+.apropos-section h1 {
+    text-align: center;
+
+    font-size: 40px;
+
+    margin-bottom: 30px;
+}
+
+.apropos-contenu {
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.apropos-contenu p {
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: #111;
+
+    color: white;
 
     text-align: center;
 
-    padding: 50px 20px;
+    padding: 30px 20px;
+
+    margin-top: 50px;
 }
 
-.hero-text {
-    max-width: 800px;
-}
-
-.petit-titre {
-    font-size: 14px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-.hero h1 span {
-    font-weight: bold;
-}
-
-.hero h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.hero-buttons {
-    margin-top: 30px;
-
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.btn {
-    display: inline-block;
-
-    padding: 14px 25px;
-
-    text-decoration: none;
-
-    border-radius: 8px;
-
-    font-weight: bold;
-}
-
-.btn.secondaire {
-    background: transparent;
-    border: 2px solid;
-}
-
-@media (max-width: 700px) {
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero h2 {
-        font-size: 22px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-}
-/* =========================
-   MENU
-========================= */
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 25px;
+footer p {
     margin: 0;
-    padding: 0;
 }
 
-.menu a {
-    text-decoration: none;
+
+/* ========================================
+   RESPONSIVE - TABLETTE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .competences {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projets-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* Bouton ☰ */
 
-.menu-bouton {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 32px;
-    cursor: pointer;
-}
-
-/* =========================
-   TELEPHONE
-========================= */
+/* ========================================
+   RESPONSIVE - TELEPHONE
+======================================== */
 
 @media (max-width: 700px) {
+
+    /* MENU */
 
     nav {
         position: relative;
+
         padding: 15px 20px;
     }
-
-    /* Afficher ☰ */
 
     .menu-bouton {
         display: block;
     }
-
-    /* Cacher le menu */
 
     .menu {
         display: none;
@@ -434,6 +572,7 @@ nav {
         position: absolute;
 
         top: 60px;
+
         left: 0;
 
         width: 100%;
@@ -444,12 +583,10 @@ nav {
 
         text-align: center;
 
-        background: white;
+        background-color: #111;
 
         padding: 10px 0;
     }
-
-    /* Afficher le menu quand JS ajoute "actif" */
 
     .menu.actif {
         display: flex;
@@ -458,68 +595,110 @@ nav {
     .menu li {
         padding: 15px;
     }
-}
-.competences-section {
-    padding: 80px 20px;
-    text-align: center;
-}
 
-.competences-section h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
+    .menu a {
+        font-size: 17px;
+    }
 
-.description {
-    max-width: 600px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-}
 
-.competences {
-    max-width: 1000px;
-    margin: auto;
+    /* HERO */
 
-    display: grid;
+    .hero {
+        min-height: 75vh;
 
-    grid-template-columns: repeat(3, 1fr);
+        padding: 60px 20px;
+    }
 
-    gap: 25px;
-}
+    .hero h1 {
+        font-size: 35px;
+    }
 
-.competence {
-    padding: 30px;
+    .hero h2 {
+        font-size: 22px;
+    }
 
-    border-radius: 12px;
+    .hero p {
+        font-size: 16px;
+    }
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 
-    transition: transform 0.3s;
-}
+    /* BOUTONS */
 
-.competence:hover {
-    transform: translateY(-8px);
-}
+    .hero-buttons {
+        flex-direction: column;
 
-.competence h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
+        align-items: center;
+    }
 
-.competence p {
-    line-height: 1.6;
-}
-@media (max-width: 700px) {
+    .hero-buttons .btn {
+        width: 100%;
+
+        max-width: 300px;
+
+        text-align: center;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding: 50px 20px;
+    }
+
+
+    /* COMPETENCES */
 
     .competences {
         grid-template-columns: 1fr;
     }
 
-    .competences-section {
+    .competences-section h2 {
+        font-size: 30px;
+    }
+
+
+    /* PROJETS */
+
+    .projets-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projets-section {
         padding: 50px 20px;
     }
 
-    .competences-section h2 {
-        font-size: 30px;
+    .projets-section > h1 {
+        font-size: 32px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        padding: 50px 20px;
+    }
+
+    .contact-section h1 {
+        font-size: 32px;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+
+    /* A PROPOS */
+
+    .apropos-section {
+        padding: 50px 20px;
+    }
+
+    .apropos-section h1 {
+        font-size: 32px;
+    }
+
+    .apropos-contenu {
+        padding: 25px 20px;
     }
 
 }
